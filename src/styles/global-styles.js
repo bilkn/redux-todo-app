@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 *, *::before, *::after {
@@ -18,7 +18,8 @@ body {
     }
    
     #root {
-        min-height: calc(100vh - 72px);
+        display: flex;
+        min-height: 100vh;
         position: relative;
     }
     li {
@@ -37,6 +38,7 @@ body {
     img {
         max-width: 100%;
     }
+    input,
     [type="search"]::-webkit-search-cancel-button,
     [type="search"]::-webkit-search-decoration {
         -webkit-appearance: none;

@@ -4,6 +4,7 @@ import {
   List,
   Item,
   Text,
+  Button,
   Label,
   Input,
 } from "./styles/todo";
@@ -26,6 +27,10 @@ Todos.Text = function TodosText({ children, ...rest }) {
 
 Todos.List = function TodosList({ children, ...rest }) {
   return <List {...rest}>{children}</List>;
+};
+
+Todos.Button = function TodosButton({ children, ...rest }) {
+  return <Button {...rest}>{children}</Button>;
 };
 
 Todos.Label = function TodosLabel({ children, ...rest }) {
