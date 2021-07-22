@@ -52,3 +52,5 @@ export const Checkbox = styled.span`
   margin-right: 2em;
   width: 30px;
 `;
+
+export const Input = styled.input``

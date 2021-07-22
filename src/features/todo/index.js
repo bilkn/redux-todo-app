@@ -7,6 +7,7 @@ import {
   Button,
   Label,
   Checkbox,
+  Input,
 } from "./styles/todo";
 
 function Todos({ children, ...rest }) {
@@ -39,6 +40,10 @@ Todos.Label = function TodosLabel({ children, ...rest }) {
 
 Todos.Checkbox = function TodosCheckbox({ ...rest }) {
   return <Checkbox {...rest} />;
+};
+
+Todos.Input = function TodosInput({ ...rest }) {
+  return <Input {...rest} />;
 };
 
 export default Todos;
