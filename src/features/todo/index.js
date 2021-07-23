@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   List,
   Item,
   Text,
   Button,
+  ControlButton,
   Label,
   Checkbox,
   Input,
@@ -34,16 +35,21 @@ Todos.Button = function TodosButton({ children, ...rest }) {
   return <Button {...rest}>{children}</Button>;
 };
 
+Todos.ControlButton = function TodosControlButton({ children, ...rest }) {
+  return <ControlButton {...rest}>{children}</ControlButton>;
+};
+
 Todos.Label = function TodosLabel({ children, ...rest }) {
   return <Label {...rest}>{children}</Label>;
 };
 
-Todos.Checkbox = function TodosCheckbox({ ...rest }) {
-  return <Checkbox {...rest} />;
+Todos.Checkbox = function TodosCheckbox({ children, ...rest }) {
+  return <Checkbox {...rest}>{children}</Checkbox>;
 };
 
 Todos.Input = function TodosInput({ ...rest }) {
-  return <Input {...rest} />;
+
+  return <Input {...rest}  />;
 };
 
 export default Todos;

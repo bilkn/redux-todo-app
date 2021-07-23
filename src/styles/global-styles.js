@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { colors, fonts } from "./variables";
 
 export const GlobalStyles = createGlobalStyle`
 *, *::before, *::after {
@@ -8,9 +9,11 @@ export const GlobalStyles = createGlobalStyle`
 } 
 html, 
 body {  
-        background: #F3F5FB;
+       
+        background: rgb(247,219,240);
+background: linear-gradient(321deg, rgba(247,219,240,1) 0%, rgba(190,174,226,1) 33%, rgba(120,188,237,1) 87%, rgba(0,212,255,1) 100%);
         color: #333;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family:  ${fonts.openSans};
         font-size: 16px;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
@@ -20,6 +23,7 @@ body {
     #root {
         display: flex;
         min-height: 100vh;
+        padding: 1.2em;
         position: relative;
     }
     li {
