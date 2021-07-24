@@ -1,6 +1,6 @@
 # Redux Todo App - A Redux based todo app.
 
-A Redux based Todo application where you can manage your todos. 
+A Redux-based Todo application where you can manage your todos. 
 
 [TodoApp](https://reddox.netlify.app/)
 
