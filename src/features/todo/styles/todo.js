@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import { screens } from "../../../styles/screens";
 import { colors, shadows } from "../../../styles/variables";
 
 export const Container = styled.div`
@@ -9,6 +10,12 @@ export const Container = styled.div`
   margin: auto;
   padding: 0.5em;
   width: 100%;
+
+  @media ${screens.md} {
+    max-width: 30%;
+    min-width: 450px;
+    padding: 1.5em;
+  }
 `;
 
 export const List = styled.ul`
@@ -16,6 +23,16 @@ export const List = styled.ul`
     margin-top: 0;
   }
 `;
+
+export const Title = styled.h1`
+  font-family: 'Satisfy', cursive;
+  font-size: 3rem;
+  margin: 0 auto;
+
+  @media ${screens.md} {
+    font-size: 5rem;
+  }
+`
 
 export const Text = styled.p`
   font-size: 1.2rem;
@@ -39,8 +56,13 @@ export const Text = styled.p`
 `;
 
 export const Item = styled.li`
+  align-items: center;
   display: flex;
   margin-top: 1em;
+
+  &:focus {
+    outline: 1px solid black;
+  }
 `;
 
 export const Button = styled.button`
@@ -49,6 +71,12 @@ export const Button = styled.button`
   color: ${colors.darkGray};
   margin-left: auto;
   padding: 0.7em;
+  transition: background-color 150ms;
+  outline: none;
+
+  &:hover, &:focus {
+    background-color: #dedede;
+  }
 `;
 
 export const ControlButton = styled.button`
@@ -59,13 +87,13 @@ export const ControlButton = styled.button`
   display: block;
   font-size: 1.2rem;
   margin: 0 auto;
-  margin-top: 2em;
   padding: 0.5em 1.5em;
+  outline: none;
   transition: background-color 150ms;
 
   &:hover,
   &:focus {
-    background-color: ${colors.secondaryLight};
+    background-color: ${colors.extraDark};
   }
 `;
 
@@ -75,7 +103,7 @@ export const Label = styled.label`
   display: flex;
 `;
 
-export const Checkbox = styled.span`
+export const Checkbox = styled.button`
   align-items: center;
   background-color: white;
   border-radius: 5px;
@@ -85,7 +113,6 @@ export const Checkbox = styled.span`
   justify-content: center;
   margin-right: 2em;
   width: 30px;
-
 `;
 
 export const Input = styled.input`
