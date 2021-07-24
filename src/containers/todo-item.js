@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { TODO_ACTIONS } from "../actions/todo";
-import store from "../app/store";
 import { Todo } from "../features";
 import {
   handleDeleteClick,
@@ -37,7 +35,7 @@ function TodoItemContainer(props) {
         )}
       </Todo.Label>
       {editable ? (
-        <Todo.Button onClick={() => handleAcceptClick(id, desc)}>
+        <Todo.Button onClick={(e) => handleAcceptClick(e,id, desc)}>
           <Check size="26" />
         </Todo.Button>
       ) : (

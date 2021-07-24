@@ -24,6 +24,16 @@ export const List = styled.ul`
   }
 `;
 
+export const Title = styled.h1`
+  font-family: 'Satisfy', cursive;
+  font-size: 3rem;
+  margin: 0 auto;
+
+  @media ${screens.md} {
+    font-size: 5rem;
+  }
+`
+
 export const Text = styled.p`
   font-size: 1.2rem;
   margin-right: 1em;
@@ -61,6 +71,12 @@ export const Button = styled.button`
   color: ${colors.darkGray};
   margin-left: auto;
   padding: 0.7em;
+  transition: background-color 150ms;
+  outline: none;
+
+  &:hover, &:focus {
+    background-color: #dedede;
+  }
 `;
 
 export const ControlButton = styled.button`
@@ -71,13 +87,13 @@ export const ControlButton = styled.button`
   display: block;
   font-size: 1.2rem;
   margin: 0 auto;
-  margin-top: 2em;
   padding: 0.5em 1.5em;
+  outline: none;
   transition: background-color 150ms;
 
   &:hover,
   &:focus {
-    background-color: ${colors.secondaryLight};
+    background-color: ${colors.extraDark};
   }
 `;
 

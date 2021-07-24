@@ -22,9 +22,12 @@ background: linear-gradient(321deg, rgba(247,219,240,1) 0%, rgba(190,174,226,1) 
    
     #root {
         display: flex;
+        flex-direction: column;
         min-height: 100vh;
-        padding: 1.2em;
+        padding: 3em 1.2em;
         position: relative;
+
+        
     }
     li {
         list-style: none;

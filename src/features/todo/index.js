@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Container,
   List,
   Item,
+  Title,
   Text,
   Button,
   ControlButton,
@@ -21,6 +22,10 @@ Todos.List = function TodosList({ children, ...rest }) {
 
 Todos.Item = function TodosItem({ children, ...rest }) {
   return <Item {...rest}>{children}</Item>;
+};
+
+Todos.Title = function TodosTitle({ children, ...rest }) {
+  return <Title {...rest}>{children}</Title>;
 };
 
 Todos.Text = function TodosText({ children, ...rest }) {
