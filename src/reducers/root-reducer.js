@@ -4,7 +4,6 @@ import { v4 as uuidv4 } from "uuid";
 const defaultState = [];
 
 function rootReducer(state = defaultState, action) {
-  console.log(action);
   switch (action.type) {
     case TODO_ACTIONS.ADD_ITEM:
       return [

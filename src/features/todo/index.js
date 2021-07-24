@@ -7,7 +7,7 @@ import {
   Text,
   Button,
   ControlButton,
-  Label,
+  ItemWrapper,
   Checkbox,
   Input,
 } from "./styles/todo";
@@ -44,8 +44,8 @@ Todos.ControlButton = function TodosControlButton({ children, ...rest }) {
   return <ControlButton {...rest}>{children}</ControlButton>;
 };
 
-Todos.Label = function TodosLabel({ children, ...rest }) {
-  return <Label {...rest}>{children}</Label>;
+Todos.ItemWrapper = function TodosItemWrapper({ children, ...rest }) {
+  return <ItemWrapper {...rest}>{children}</ItemWrapper>;
 };
 
 Todos.Checkbox = function TodosCheckbox({ children, ...rest }) {
