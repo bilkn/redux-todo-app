@@ -13,19 +13,20 @@ function TodoItemContainer(props) {
   const [desc, setDesc] = useState("");
 
   const handleTodoTextChange = (e) => {
-    if (e.target.value.length < 30) setDesc(e.target.value);
+    if (e.target.value.length < 140) setDesc(e.target.value);
   };
 
   return (
-    <Todo.Item onClick={(e) => handleItemClick(e, id)} key={id}>
-      <Todo.Label htmlFor={id}>
+    <Todo.Item key={id}>
+      <Todo.ItemWrapper
+        onClick={(e) => (!editable ? handleItemClick(e, id) : null)}
+      >
         {editable ? (
-          <Todo.Input id={id} value={desc} onChange={handleTodoTextChange} />
+          <Todo.Input value={desc} onChange={handleTodoTextChange} />
         ) : (
           <>
             <Todo.Checkbox
               onClick={(e) => handleItemClick(e, id)}
-              id={id}
               type="checkbox"
             >
               {isChecked && <Check size="26" />}
@@ -33,9 +34,9 @@ function TodoItemContainer(props) {
             <Todo.Text isChecked={isChecked}>{todoDesc}</Todo.Text>
           </>
         )}
-      </Todo.Label>
+      </Todo.ItemWrapper>
       {editable ? (
-        <Todo.Button onClick={(e) => handleAcceptClick(e,id, desc)}>
+        <Todo.Button onClick={(e) => handleAcceptClick(e, id, desc)}>
           <Check size="26" />
         </Todo.Button>
       ) : (

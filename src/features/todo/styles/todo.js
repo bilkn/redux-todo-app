@@ -12,7 +12,7 @@ export const Container = styled.div`
   width: 100%;
 
   @media ${screens.md} {
-    max-width: 30%;
+    max-width: 650px;
     min-width: 450px;
     padding: 1.5em;
   }
@@ -25,34 +25,21 @@ export const List = styled.ul`
 `;
 
 export const Title = styled.h1`
-  font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
   font-size: 3rem;
   margin: 0 auto;
 
   @media ${screens.md} {
     font-size: 5rem;
   }
-`
+`;
 
 export const Text = styled.p`
   font-size: 1.2rem;
   margin-right: 1em;
-  max-width: 10ch;
   position: relative;
   text-decoration: ${({ isChecked }) => (isChecked ? "line-through" : "unset")};
   overflow: hidden;
-  /*   &::after {
-    background-color: black;
-    border-radius: 5px;
-    content: " ";
-    display: block;
-    height: 3px;
-    left: 0;
-    position: absolute;
-    transition: transform 0.3s;
-    top: 50%;
-    width: 100%;
-  } */
 `;
 
 export const Item = styled.li`
@@ -74,7 +61,8 @@ export const Button = styled.button`
   transition: background-color 150ms;
   outline: none;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: #dedede;
   }
 `;
@@ -97,10 +85,11 @@ export const ControlButton = styled.button`
   }
 `;
 
-export const Label = styled.label`
+export const ItemWrapper = styled.div`
   align-items: center;
   cursor: pointer;
   display: flex;
+  width: 100%;
 `;
 
 export const Checkbox = styled.button`
